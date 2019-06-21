@@ -1,7 +1,7 @@
 class Libsigrok < Formula
   homepage "https://sigrok.org/"
-  url "https://sigrok.org/download/source/libsigrok/libsigrok-0.5.0.tar.gz"
-  sha256 "4c8c86779b880a5c419f6c77a08b1147021e5a19fa83b0f3b19da27463c9f3a4"
+  url "https://sigrok.org/download/source/libsigrok/libsigrok-0.5.1.tar.gz"
+  sha256 "e40fde7af98d29e922e9d3cbe0a6c0569889153fc31e47b8b1afe4d846292b9c"
   head "git://sigrok.org/libsigrok", :using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
 
   depends_on "autoconf" => :build
