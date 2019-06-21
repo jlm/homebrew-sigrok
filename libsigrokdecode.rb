@@ -1,17 +1,17 @@
-require 'formula'
+require "formula"
 
 class Libsigrokdecode < Formula
-  url 'http://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0.5.0.tar.gz'
-  homepage 'http://sigrok.org/'
-  head 'git://sigrok.org/libsigrokdecode',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
-  sha256 '4aa8579ecea9b421b8ac048a9b18c27e63206839f269374398d89c14a47bd1c1'
+  url "https://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0.5.0.tar.gz"
+  homepage "https://sigrok.org/"
+  head "git://sigrok.org/libsigrokdecode",:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
+  sha256 "4aa8579ecea9b421b8ac048a9b18c27e63206839f269374398d89c14a47bd1c1"
 
-  depends_on 'rene-dev/sigrok/libsigrok'
-  depends_on 'glib'
-  depends_on 'pkg-config' => :build
-  depends_on "python3"
+  depends_on "jlm/sigrok/libsigrok"
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "glib"
+  depends_on "python3"
 
   def install
     ENV.delete "PYTHONPATH"
